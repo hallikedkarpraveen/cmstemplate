@@ -1,0 +1,20 @@
+{
+  "name": "cmsTemplate",
+  "version": "1.0.0",
+  "description": "updating the tickets",
+  "author": "Praveen Hallikedkar <wiziton@gmail.com>",
+  "license": "MIT",
+  "main": "app.js",
+  "keywords": [
+    "nodejs",
+    "bootstrap",
+    "express"
+  ],
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+ "repository": {
+  "type" : "git",
+  "url" :"https://github.com/hallikedkarpraveen/cmstemplate.git"
+ }
+}
