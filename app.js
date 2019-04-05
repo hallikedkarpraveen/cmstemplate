@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
+var firebase = require('firebase');
+var firebaseui = require('firebaseui');
 
 const path = __dirname + '/views/';
 const port = 8080;
@@ -23,4 +25,4 @@ app.use('/', router);
 
 app.listen(port, function () {
   console.log('Example app listening on port 8080!')
-})
+});

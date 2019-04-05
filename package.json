@@ -11,10 +11,11 @@
     "express"
   ],
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "firebaseui": "^3.5.2"
   },
- "repository": {
-  "type" : "git",
-  "url" :"https://github.com/hallikedkarpraveen/cmstemplate.git"
- }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hallikedkarpraveen/cmstemplate.git"
+  }
 }
