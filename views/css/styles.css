@@ -31,7 +31,7 @@ p {
 
 .btn-primary {
     color: #fff;
-    text-color: #000000;
+    text-decoration-color: #000000;
     border-color: white;
     margin-bottom: 5px;
 }
@@ -43,7 +43,29 @@ audio {
     max-width: 80%;
 }
 
-div.caption: {
+div.caption {
     float: left;
     clear: both;
 }
+header{
+    background: url(/views/img/man.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 1000px;
+  }
+  @media screen and (max-width: 670px){
+    header{
+      min-height: 500px;
+    }
+  }
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+     
