@@ -13,51 +13,129 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <title>CCATT</title>
+    <style>
+        #sign-in-card {
+            background-color: white
+        }
+
+        ;
+
+        #sign-in-button1 {
+            align-content: center;
+            height: space-around;
+            width: space-around
+        }
+
+        ;
+
+        #sign-in-button2 {
+            align-content: center;
+            width: 20 px;
+            height: 60 px
+        }
+
+        ;
+
+        #animation {
+            background: linear-gradient(#000, #151515);
+        }
+
+        #canvas {
+            display: block;
+        }
+
+        #field {
+            padding-top: 20px;
+            padding-bottom: 30px
+        }
+
+        ;
+    </style>
+    <script>
+
+    </script>
 </head>
 
 <body>
     <div class="container">
-        
+        <div style="width:60px; height:120px"></div>
+        <div class="valign-wrapper">
 
-
-
-
-
-
-
-  <!-- footer -->
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-  <script></script>
-        <footer class="page-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Footer Content</h5>
-                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                            content.</p>
+            <!--sign in form-->
+            <div class="row" style="padding-left: 40%">
+                <div class="col s12 m6 l10 offset-l6 center-align" id="sign-in-card">
+                    <div class="card grey lighten-1">
+                        <div class="card-content black-text">
+                            <div class="card-title">Sign in</div>
+                        </div>
+                        <div class="container center-align">
+                            <form class="form-container" id="signin-form">
+                                <div class="input-field col s12" id="field">
+                                    <input type="email" id="login-email" placeholder="Email" class="validate" required>
+                                </div>
+                                <div class="input-field col s12" id="field">
+                                    <input type="password" id="login-password" placeholder="Password" required>
+                                </div>
+                                <div class="input-field col s12" id="sign-in-button1" id="field">
+                                    <button class="btn grey lighten-1" type="submit">Sign IN</button>
+                                </div>
+                            </form>
+                            <div class="input-field col s12 modal-trigger" data-target="modal-signup" id="field">
+                                <button class="btn waves-effect waves-light grey lighten-1 btn-large" type="submit"
+                                    name="action">Sign Up for new account
+                                    <i class="material-icons right">add</i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Links</h5>
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2014 Copyright Text
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+
+            <!-- SIGN UP MODAL -->
+            <div id="modal-signup" class="modal">
+                <div class="modal-content">
+                    <h4 class="yellow Black-text">Sign up</h4><br />
+                    <form id="signup-form">
+                        <div class="input-field">
+                            <input type="email" id="signup-email" required />
+                            <label for="signup-email">Email address</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="signup-password" required />
+                            <label for="signup-password">Choose password</label>
+                        </div>
+                        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+                    </form>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBMMghhp0PFMTeLD_Do76VIhANBpfdgSSA",
+            authDomain: "cmstemplate-f02b0.firebaseapp.com",
+            databaseURL: "https://cmstemplate-f02b0.firebaseio.com",
+            projectId: "cmstemplate-f02b0",
+
+        };
+        firebase.initializeApp(config);
+
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // update firestore settings
+        db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
